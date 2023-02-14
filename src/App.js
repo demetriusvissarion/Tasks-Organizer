@@ -26,7 +26,7 @@ function App() {
       },
       transformTasks
     );
-  }, [fetchTasks]); // add dependency "fetchTasks" later on, right now it would create an infinite loop
+  }, [fetchTasks]); // add dependency "fetchTasks" later on, at the begining it would create an infinite loop
 
   const taskAddHandler = (task) => {
     setTasks((prevTasks) => prevTasks.concat(task));

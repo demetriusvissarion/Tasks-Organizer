@@ -27,6 +27,7 @@ const useHttp = () => {
     setIsLoading(false);
   }, []);
 
+  // bellow we render the 3 elements as properties
   return {
     isLoading: isLoading,
     error: error,

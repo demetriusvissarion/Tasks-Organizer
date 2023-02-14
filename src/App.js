@@ -20,10 +20,12 @@ function App() {
       setTasks(loadedTasks);
     };
 
-    fetchTasks({
-      url: "https://movie-database-c5c02-default-rtdb.europe-west1.firebasedatabase.app/tasks.json",
-      transformTasks,
-    });
+    fetchTasks(
+      {
+        url: "https://movie-database-c5c02-default-rtdb.europe-west1.firebasedatabase.app/tasks.json",
+      },
+      transformTasks
+    );
   }, [fetchTasks]); // add dependency "fetchTasks" later on, right now it would create an infinite loop
 
   const taskAddHandler = (task) => {

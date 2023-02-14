@@ -24,7 +24,7 @@ function App() {
       url: "https://movie-database-c5c02-default-rtdb.europe-west1.firebasedatabase.app/tasks.json",
       transformTasks,
     });
-  }, [fetchTasks]); // add dependency "fetchTasks" later on, right now itr would create an infinite loop
+  }, [fetchTasks]); // add dependency "fetchTasks" later on, right now it would create an infinite loop
 
   const taskAddHandler = (task) => {
     setTasks((prevTasks) => prevTasks.concat(task));
